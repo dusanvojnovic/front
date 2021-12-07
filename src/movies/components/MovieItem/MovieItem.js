@@ -16,7 +16,7 @@ const MovieItem = (props) => {
     event.preventDefault();
     try {
       await sendRequest(
-        process.env.REACT_APP_BACKEND_URL + '/movies',
+        'http://localhost:5000/api/movies',
         'POST',
         JSON.stringify({
           title: props.movieTitle,
@@ -31,7 +31,9 @@ const MovieItem = (props) => {
         }
       );
       history.push(`/${authCtx.userId}/movies`);
-    } catch (err) {}
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   return (

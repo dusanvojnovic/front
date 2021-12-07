@@ -42,17 +42,21 @@ const Form = () => {
     if (isLoginMode) {
       try {
         const responseData = await sendRequest(
-          `${process.env.REACT_APP_BACKEND_URL}/users/login`,
+          `http://localhost:5000/api/users/login`,
           'POST',
           JSON.stringify({
             email: formState.inputs.email.value,
             password: formState.inputs.password.value,
           }),
-          { 'Content-Type': 'application/json' }
+          {
+            'Content-Type': 'application/json',
+          }
         );
         authCtx.login(responseData.id, responseData.token);
         history.push(`/`);
-      } catch (err) {}
+      } catch (err) {
+        console.log(err);
+      }
     } else {
       try {
         const responseData = await sendRequest(
