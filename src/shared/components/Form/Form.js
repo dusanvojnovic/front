@@ -42,7 +42,7 @@ const Form = () => {
     if (isLoginMode) {
       try {
         const responseData = await sendRequest(
-          process.env.REACT_APP_BACKEND_URL + '/users/login',
+          `${process.env.REACT_APP_BACKEND_URL}/users/login`,
           'POST',
           JSON.stringify({
             email: formState.inputs.email.value,
@@ -56,7 +56,7 @@ const Form = () => {
     } else {
       try {
         const responseData = await sendRequest(
-          process.env.REACT_APP_BACKEND_URL + '/users/signup',
+          `${process.env.REACT_APP_BACKEND_URL}/users/signup`,
           'POST',
           JSON.stringify({
             email: formState.inputs.email.value,
@@ -165,7 +165,11 @@ const Form = () => {
               />
             </div>
           )}
-          <Button type="submit" disabled={!formState.isValid}>
+          <Button
+            onClick={formSubmitHandler}
+            type="submit"
+            disabled={!formState.isValid}
+          >
             {isLoginMode ? 'login' : 'signup'}
           </Button>
         </form>
