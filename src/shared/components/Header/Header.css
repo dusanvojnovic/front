@@ -1,0 +1,131 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  background-color: #393e46;
+  display: flex;
+  padding: 0 2%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 50;
+}
+
+.toggleButton {
+  position: absolute;
+  top: 2rem;
+  right: 1.5rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.7rem;
+  height: 1.5rem;
+  background-color: transparent;
+  border: none;
+}
+
+.toggleButton:hover {
+  cursor: pointer;
+}
+
+.toggleButton .bar {
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #d65a31;
+}
+
+.brand {
+  text-decoration: none;
+  letter-spacing: 2.8px;
+  font-size: 2.1rem;
+}
+
+.brand h3 {
+  color: #d65a31;
+  padding-left: 1.6rem;
+  font-family: 'Montserrat Alternates';
+  font-weight: 800;
+}
+
+.hidden {
+  height: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+
+.navigation ul,
+.hidden ul {
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.navigation li,
+.hidden li {
+  list-style: none;
+}
+
+.navigationLink h3 {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  color: #eeeeee;
+}
+
+.navigationLink h3:hover {
+  color: #d65a31;
+  cursor: pointer;
+}
+
+.brand:hover {
+  color: #eeeeee;
+}
+
+.navigationLink {
+  text-decoration: none;
+  color: #eeeeee;
+  display: block;
+  padding: 0.75rem;
+}
+
+@media (max-width: 420px) {
+  .toggleButton {
+    display: flex;
+  }
+
+  .toggleButton:hover {
+    background-color: transparent;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .brand {
+    font-size: 1.6rem;
+  }
+
+  .navigation {
+    position: absolute;
+    left: 0;
+    top: 5rem;
+    height: auto;
+    width: 100%;
+    background-color: #393e46;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .navigation ul {
+    flex-direction: column;
+  }
+
+  .navigation-hidden ul {
+    list-style-type: none;
+  }
+}

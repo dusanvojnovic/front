@@ -1,0 +1,108 @@
+.card {
+  display: inline;
+  float: left;
+  cursor: pointer;
+  min-width: 250px;
+  min-height: 360px;
+  margin: 1rem 2rem;
+  position: relative;
+}
+
+.movieInfo {
+  padding-bottom: 0.5rem;
+}
+
+.title {
+  font-weight: bold;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  color: #d65a31;
+  font-size: 1rem;
+  position: relative;
+  padding: 2rem 0.7rem 0.5rem;
+}
+
+.title .date {
+  font-size: 0.8rem;
+}
+
+.description {
+  --scrollbar-width: 0.5rem;
+  --mask-height: 2rem;
+  overflow-y: auto;
+  color: #eeeeee;
+  height: 12rem;
+  font-size: 0.9em;
+  line-height: 1.4rem;
+  padding: 0.5rem 1.5rem;
+  --mask-image-content: linear-gradient(
+    to bottom,
+    transparent,
+    black var(--mask-height),
+    black calc(100% - var(--mask-height)),
+    transparent
+  );
+  --mask-size-content: calc(100% - var(--scrollbar-width)) 100%;
+  --mask-image-scrollbar: linear-gradient(black, black);
+  --mask-size-scrollbar: var(--scrollbar-width) 50%;
+  mask-image: var(--mask-image-content), var(--mask-image-scrollbar);
+  mask-size: var(--mask-size-content), var(--mask-size-scrollbar);
+  mask-position: 0 0, 100% 0;
+  mask-repeat: no-repeat, no-repeat;
+}
+
+.description::-webkit-scrollbar {
+  display: none;
+}
+
+.back Button {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  font-family: 'Montserrat';
+}
+
+.front,
+.back {
+  display: flex;
+  border-radius: 6px;
+  background-position: center;
+  text-align: center;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: ease-in-out 700ms;
+}
+
+.front {
+  background-size: cover;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.card:hover .front,
+.card:active .front {
+  transform: rotateY(180deg);
+}
+
+.back {
+  background: #393e46;
+  transform: rotateY(-180deg);
+  justify-content: space-between;
+}
+
+.card:hover .back,
+.card:active .back {
+  transform: rotateY(0deg);
+}
+
+@media (max-width: 420px) {
+  .front,
+  .back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+  }
+}

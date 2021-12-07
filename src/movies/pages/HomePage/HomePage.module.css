@@ -1,0 +1,71 @@
+.home {
+  width: 100%;
+  position: absolute;
+  left: 0px;
+}
+
+.text {
+  position: absolute;
+  top: 16rem;
+  left: 5rem;
+  z-index: 1;
+}
+
+.text h1 {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  color: #222831;
+  font-size: 2.5rem;
+}
+
+.text p {
+  color: #222831;
+  font-size: 1.5rem;
+}
+
+.text span {
+  color: #d65a31;
+  font-family: 'Montserrat Alternates';
+  font-weight: 800;
+}
+
+.picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+  z-index: -1;
+}
+
+.mobilePicture {
+  display: none;
+}
+
+@media (max-width:420px) {
+  .text {
+    top: 7rem;
+    left: 2rem;
+  } 
+  
+  .text h1 {
+    font-size: 1.7rem;
+  }
+
+  .text p {
+    font-size: 1.1rem;
+    padding: 1rem 2.7rem 0 0;
+  }
+
+  .picture {
+    display: none;
+  }
+
+  .mobilePicture {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+  }
+}

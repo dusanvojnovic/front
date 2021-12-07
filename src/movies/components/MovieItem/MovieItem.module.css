@@ -1,0 +1,8 @@
+.movieLink {
+  text-decoration: none;
+  color: #393e46;
+}
+
+.movieLink:hover {
+  color: #d65a31;
+}

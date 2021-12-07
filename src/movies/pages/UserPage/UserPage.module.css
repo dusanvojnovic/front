@@ -1,0 +1,56 @@
+.page {
+  background-color: #c5c5c5;
+}
+.welcomeMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8rem;
+}
+
+.welcomeMessage Button {
+  font-family: 'Montserrat';
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+Button:hover {
+  background-color: #d65a31;
+}
+
+.textMessage {
+  color: #393e46;
+  margin: 2rem 30rem;
+  font-family: 'Montserrat';
+  font-size: 2rem;
+}
+
+.textMessage h1 {
+  color: #d65a31;
+  display: inline;
+  font-family: 'Montserrat Alternates';
+  font-size: 2rem;
+}
+
+.button:hover {
+  background: #222831;
+}
+
+.movies {
+  display: flex;
+  flex-direction: row;
+  padding: 4rem;
+}
+
+@media (max-width: 420px) {
+  .welcomeMessage {
+    text-align: center;
+  }
+
+  .movies {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}

@@ -1,0 +1,27 @@
+.form-control {
+  margin: 0rem 0;
+}
+
+.form-control input,
+.form-control input[type='email'],
+.form-control input:-webkit-autofill:focus {
+  width: 100%;
+  font: inherit;
+  padding: 0.15rem 0.25rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+}
+
+input:focus,
+input:-webkit-autofill {
+  outline: none;
+  background: transparent;
+  border: none;
+}
+
+.form-control--invalid {
+  color: red;
+  border-color: red;
+  background: #ffd1d1;
+}
