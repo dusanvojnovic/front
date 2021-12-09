@@ -18,9 +18,14 @@ const ModalOverlay = (props) => {
         <h2>{props.header}</h2>
       </header>
       <div className="modal-content">{props.children}</div>
-      <footer className="modal-footer">
-        <Button onClick={props.onButtonClick}>
-          {props.buttonText || 'OK'}
+      <footer className={props.errorModal ? 'modal-footer' : 'two-buttons'}>
+        {props.errorModal ? null : (
+          <Button className="modal-button" onClick={props.onSecondButtonClick}>
+            {props.cancelButtonText}
+          </Button>
+        )}
+        <Button className="modal-button" onClick={props.onButtonClick}>
+          {props.buttonText || 'ok'}
         </Button>
       </footer>
     </div>,

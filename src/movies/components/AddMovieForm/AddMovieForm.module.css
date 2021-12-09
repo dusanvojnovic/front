@@ -22,13 +22,6 @@
   width: 20rem;
 }
 
-/* .formInputs input {
-  font-size: 1rem;
-  font-family: 'Montserrat';
-  font-weight: 200;
-  color: #eeeeee;
-} */
-
 .formInputs label {
   font-size: 0.8rem;
   color: #eeeeee;
@@ -53,14 +46,17 @@
   border-bottom: 1px solid white;
 }
 
-.last {
-  background: transparent;
-  margin: 0rem 2rem 0 2rem;
-}
-
-.last:hover {
+.textarea {
+  font-size: 0.8rem;
+  font-family: 'Montserrat';
+  font-weight: 200;
   color: #eeeeee;
-  background-color: #d65a31;
+  display: block;
+  height: 2.5rem;
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
 }
 
 @media (max-width: 420px) {
@@ -71,10 +67,6 @@
     transform: translate(-50%, -50%);
     padding: 1rem;
     width: 90%;
-  }
-
-  .last {
-    width: 50%;
   }
 
   .formInputs label {
@@ -93,6 +85,16 @@
     margin: 0.5rem 2rem;
     color: #d65a31;
   }
+
+  .textarea {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .formContainer Button {
+    margin: 1rem 6.2rem;
+    width: 38%;
+  }
 }
 
 @media (max-width: 320px) {
@@ -103,5 +105,10 @@
     transform: translate(-50%, -50%);
     padding: 1rem;
     width: 90%;
+  }
+
+  .formContainer Button {
+    margin: 1rem 6rem;
+    width: 38%;
   }
 }

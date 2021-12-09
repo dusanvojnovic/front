@@ -16,7 +16,7 @@ const MovieItem = (props) => {
     event.preventDefault();
     try {
       await sendRequest(
-        'http://localhost:5000/api/movies',
+        `${process.env.REACT_APP_BACKEND_URL}/movies`,
         'POST',
         JSON.stringify({
           title: props.movieTitle,
@@ -44,6 +44,7 @@ const MovieItem = (props) => {
           header="An Error Occured"
           onClick={clearError}
           onButtonClick={clearError}
+          errorModal
         >
           {error}
         </Modal>

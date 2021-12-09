@@ -42,7 +42,7 @@ const Form = () => {
     if (isLoginMode) {
       try {
         const responseData = await sendRequest(
-          `http://localhost:5000/api/users/login`,
+          `${process.env.REACT_APP_BACKEND_URL}/users/login`,
           'POST',
           JSON.stringify({
             email: formState.inputs.email.value,
@@ -113,6 +113,7 @@ const Form = () => {
           header="An Error Occured!"
           onButtonClick={clearError}
           onClick={clearError}
+          errorModal
         >
           {error}
         </Modal>
@@ -124,6 +125,7 @@ const Form = () => {
           <div className={classes.formInputs}>
             <label htmlFor="userEmail">email</label>
             <Input
+              element="input"
               id="email"
               type="email"
               validators={[VALIDATOR_EMAIL()]}
@@ -136,6 +138,7 @@ const Form = () => {
             <div className={classes.formInputs}>
               <label htmlFor="password">username</label>
               <Input
+                element="input"
                 id="username"
                 type="text"
                 validators={[VALIDATOR_REQUIRE()]}
@@ -148,6 +151,7 @@ const Form = () => {
           <div className={classes.formInputs}>
             <label htmlFor="password">password</label>
             <Input
+              element="input"
               id="password"
               type="password"
               validators={[VALIDATOR_MINLENGTH(6)]}
@@ -160,6 +164,7 @@ const Form = () => {
             <div className={classes.formInputs}>
               <label htmlFor="password">confirm password</label>
               <Input
+                element="input"
                 id="confirmedPassword"
                 type="password"
                 validators={[VALIDATOR_REQUIRE()]}

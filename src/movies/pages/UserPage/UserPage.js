@@ -45,6 +45,7 @@ const UserPage = () => {
           header="Ooops!"
           onClick={clearError}
           onButtonClick={clearError}
+          errorModal
         >
           {error}
         </Modal>

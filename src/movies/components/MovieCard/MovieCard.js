@@ -33,9 +33,11 @@ const MovieCard = (props) => {
           header="Confirm Delete"
           onClick={() => setShowModal(false)}
           onButtonClick={deleteMovieHandler}
-          buttonText="YES"
+          onSecondButtonClick={() => setShowModal(false)}
+          buttonText="yes"
+          cancelButtonText="no"
         >
-          Are you sure you want to delete this movie?
+          Are you sure you want to delete '{props.title}' ?
         </Modal>
       )}
       <div

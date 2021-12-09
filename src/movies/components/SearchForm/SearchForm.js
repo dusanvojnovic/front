@@ -6,7 +6,7 @@ import Modal from '../../../shared/components/UIElements/Modal';
 import LoadingSpinner from '../../../shared/components/UIElements/LoadingSpinner';
 import MovieItem from '../MovieItem/MovieItem';
 import { useHttpClient } from '../../../shared/hooks/http-hook';
-// import homePicture from '../../../assets/home.png';
+import { useHistory } from 'react-router-dom';
 import classes from './SearchForm.module.css';
 
 const MOVIE_DB_SEARCH_URL = 'https://api.themoviedb.org/3/search/movie';
@@ -14,6 +14,8 @@ const MOVIE_DB_SEARCH_URL = 'https://api.themoviedb.org/3/search/movie';
 const MOVIE_DB_IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
 
 const SearchForm = () => {
+  const history = useHistory();
+
   const [formState, inputHandler] = useForm(
     {
       title: {
@@ -26,6 +28,10 @@ const SearchForm = () => {
   const { isLoading, error, sendRequest, clearError } = useHttpClient();
   const [findedMovies, setFindedMovies] = useState([]);
   const [noMoviesFounded, setNoMoviesFounded] = useState(false);
+
+  const goToAddMoviePageHandler = () => {
+    history.push('/add');
+  };
 
   const formSubmitionHandler = useCallback(
     async (event) => {
@@ -86,6 +92,7 @@ const SearchForm = () => {
           header="An Error Occured!"
           onClick={clearError}
           onButtonClick={clearError}
+          errorModal
         >
           {error}
         </Modal>
@@ -97,6 +104,7 @@ const SearchForm = () => {
           {isLoading && <LoadingSpinner asOverlay />}
           <div className={classes.form}>
             <Input
+              element="input"
               className={classes.searchInput}
               id="title"
               type="text"
@@ -114,7 +122,10 @@ const SearchForm = () => {
               show
               header="Ooops!"
               onClick={() => setNoMoviesFounded(false)}
-              onButtonClick={() => setNoMoviesFounded(false)}
+              buttonText="add movie"
+              cancelButtonText="cancel"
+              onButtonClick={goToAddMoviePageHandler}
+              onSecondButtonClick={() => setNoMoviesFounded(false)}
             >
               Sorry, can't find that movie
             </Modal>

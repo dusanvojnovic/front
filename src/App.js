@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
 
+import AddMovieForm from './movies/components/AddMovieForm/AddMovieForm';
 import LoadingSpinner from './shared/components/UIElements/LoadingSpinner';
 import Header from './shared/components/Header/Header';
 import HomePage from './movies/pages/HomePage/HomePage';
@@ -29,6 +30,9 @@ const App = () => {
         </Route>
         <Route path="/search">
           <SearchForm />
+        </Route>
+        <Route path="/add" exact>
+          <AddMovieForm />
         </Route>
         <Route path="/:userId/movies" exact>
           <UserPage />
