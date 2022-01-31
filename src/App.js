@@ -12,12 +12,6 @@ import SearchForm from './movies/components/SearchForm/SearchForm';
 import { AuthContext } from './shared/context/auth-context';
 import { useAuth } from './shared/hooks/auth-hook';
 
-// const Form = React.lazy(() => import('./shared/components/Form/Form'));
-// const UserPage = React.lazy(() => import('./movies/pages/UserPage/UserPage'));
-// const SearchForm = React.lazy(() =>
-//   import('./movies/components/SearchForm/SearchForm')
-// );
-
 const App = () => {
   const { token, login, logout, userId } = useAuth();
 

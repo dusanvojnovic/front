@@ -52,9 +52,10 @@ const UserPage = () => {
       )}
       {isLoading && <LoadingSpinner asOverlay />}
       <div className={classes.welcomeMessage}>
-        <div className={classes.textMessage}>
-          Add movie to your <h1>WatchList</h1>!
-        </div>
+        <p className={classes.textMessage}>
+          Add movie to your
+          <span className={classes.title}>&nbsp;WatchList</span>
+        </p>
         <Button onClick={goToSearchPageHandler}>add movie</Button>
       </div>
       {!isLoading && loadedMovies && (

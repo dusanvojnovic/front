@@ -6,7 +6,7 @@
 
 .text {
   position: absolute;
-  top: 16rem;
+  top: 12rem;
   left: 5rem;
   z-index: 1;
 }
@@ -41,21 +41,7 @@
   display: none;
 }
 
-@media (max-width:420px) {
-  .text {
-    top: 7rem;
-    left: 2rem;
-  } 
-  
-  .text h1 {
-    font-size: 1.7rem;
-  }
-
-  .text p {
-    font-size: 1.1rem;
-    padding: 1rem 2.7rem 0 0;
-  }
-
+@media only screen and (max-width: 56.25em) {
   .picture {
     display: none;
   }
@@ -67,5 +53,29 @@
     object-fit: cover;
     position: fixed;
     z-index: -1;
+  }
+  .text {
+    top: 7rem;
+    left: 2rem;
+  }
+
+  .text h1 {
+    font-size: 1.7rem;
+  }
+
+  .text p {
+    font-size: 1.1rem;
+    padding: 1rem 2.7rem 0 0;
+  }
+}
+
+@media (max-width: 26.25em) {
+  .text h1 {
+    font-size: 1.4rem;
+  }
+
+  .text p {
+    font-size: 1rem;
+    padding: 1rem 2.7rem 0 0;
   }
 }

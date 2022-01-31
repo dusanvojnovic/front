@@ -7,10 +7,10 @@
   align-items: center;
   justify-content: center;
   margin-top: 8rem;
+  width: 100%;
 }
 
 .welcomeMessage Button {
-  font-family: 'Montserrat';
   font-size: 1rem;
   font-weight: 100;
 }
@@ -21,12 +21,12 @@ Button:hover {
 
 .textMessage {
   color: #393e46;
-  margin: 2rem 30rem;
+  margin: 2rem 0rem;
   font-family: 'Montserrat';
   font-size: 2rem;
 }
 
-.textMessage h1 {
+.title {
   color: #d65a31;
   display: inline;
   font-family: 'Montserrat Alternates';
@@ -43,9 +43,32 @@ Button:hover {
   padding: 4rem;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 56.25em) {
+  .textMessage,
+  .title {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 43.75em) {
+  .textMessage,
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .welcomeMessage Button {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 26.25em) {
   .welcomeMessage {
     text-align: center;
+  }
+
+  .textMessage,
+  .title {
+    font-size: 1.2rem;
   }
 
   .movies {

@@ -1,10 +1,10 @@
 .card {
-  display: inline;
-  float: left;
+  display: inline-block;
+  /* float: left; */
   cursor: pointer;
-  min-width: 250px;
-  min-height: 360px;
-  margin: 1rem 2rem;
+  min-width: 15.625rem;
+  min-height: 22.5rem;
+  margin: 1rem;
   position: relative;
 }
 
@@ -98,7 +98,7 @@
   transform: rotateY(0deg);
 }
 
-@media (max-width: 420px) {
+@media (max-width: 68.75em) {
   .front,
   .back {
     -webkit-backface-visibility: hidden;

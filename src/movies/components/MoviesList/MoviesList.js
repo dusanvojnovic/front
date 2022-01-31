@@ -1,10 +1,8 @@
 import MovieCard from '../MovieCard/MovieCard';
 
-import classes from './MovieList.module.css'
-
 const MoviesList = (props) => {
   return (
-    <ul className={classes.moviesList}>
+    <section>
       {props.items.map((movie) => (
         <MovieCard
           imageUrl={movie.imageUrl}
@@ -17,7 +15,7 @@ const MoviesList = (props) => {
           onDelete={props.onDeleteMovie}
         />
       ))}
-    </ul>
+    </section>
   );
 };
 

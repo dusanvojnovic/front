@@ -1,5 +1,5 @@
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -16,13 +16,13 @@
   position: absolute;
   top: 2rem;
   right: 1.5rem;
-  display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 2.7rem;
   height: 1.5rem;
   background-color: transparent;
   border: none;
+  display: none;
 }
 
 .toggleButton:hover {
@@ -70,7 +70,6 @@
 }
 
 .navigationLink h3 {
-  font-family: 'Montserrat';
   font-weight: 400;
   color: #eeeeee;
 }
@@ -86,12 +85,16 @@
 
 .navigationLink {
   text-decoration: none;
-  color: #eeeeee;
   display: block;
   padding: 0.75rem;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 50em) {
+  .hidden ul {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 37.5em) {
   .toggleButton {
     display: flex;
   }
@@ -123,6 +126,7 @@
 
   .navigation ul {
     flex-direction: column;
+    font-size: 0.8rem;
   }
 
   .navigation-hidden ul {

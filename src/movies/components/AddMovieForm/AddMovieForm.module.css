@@ -13,8 +13,8 @@
 }
 
 .formContainer Button {
-  margin: 1rem 7rem;
-  font-family: 'Montserrat';
+  margin: 1rem 5rem;
+  width: 50%;
 }
 
 .formInputs {
@@ -59,7 +59,7 @@
   border-bottom: 1px solid white;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 30em) {
   .formContainer {
     position: absolute;
     top: 55%;
@@ -67,6 +67,11 @@
     transform: translate(-50%, -50%);
     padding: 1rem;
     width: 90%;
+  }
+
+  .formInputs {
+    margin-bottom: 1rem;
+    width: 20rem;
   }
 
   .formInputs label {
@@ -92,23 +97,12 @@
   }
 
   .formContainer Button {
-    margin: 1rem 6.2rem;
-    width: 38%;
+    font-size: 0.8rem;
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 20em) {
   .formContainer {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 1rem;
-    width: 90%;
-  }
-
-  .formContainer Button {
-    margin: 1rem 6rem;
-    width: 38%;
+    margin-top: 15rem;
   }
 }

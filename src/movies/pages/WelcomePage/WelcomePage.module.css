@@ -1,27 +1,26 @@
 .welcome {
-    color: #d65a31;
-    font-family: 'Montserrat';
-    font-size: 1.8rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  color: #d65a31;
+  font-family: 'Montserrat';
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .welcome h1 {
-    font-family: 'Montserrat Alternates';
-    font-size: 2.5rem;
-    display: inline;
-    margin-left: 10px;
+  font-family: 'Montserrat Alternates';
+  font-size: 2.5rem;
+  display: inline;
+  margin-left: 10px;
 }
 
-@media (max-width:420px) {
-    .welcome {
-        flex-direction: column;
-        font-size: 1.6rem;
-    }
-   
+@media (max-width: 53.25em) {
+  .welcome {
+    flex-direction: column;
+    font-size: 1.6rem;
+  }
 }

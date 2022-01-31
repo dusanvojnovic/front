@@ -14,20 +14,12 @@
 
 .formContainer Button {
   margin: 1rem 7rem;
-  font-family: 'Montserrat';
 }
 
 .formInputs {
   margin-bottom: 1.6rem;
   width: 20rem;
 }
-
-/* .formInputs input {
-  font-size: 1rem;
-  font-family: 'Montserrat';
-  font-weight: 200;
-  color: #eeeeee;
-} */
 
 .formInputs label {
   font-size: 0.8rem;
@@ -55,7 +47,7 @@
 
 .last {
   background: transparent;
-  margin: 0rem 2rem 0 2rem;
+  margin: 0 2rem;
 }
 
 .last:hover {
@@ -63,45 +55,41 @@
   background-color: #d65a31;
 }
 
-@media (max-width: 420px) {
-  .formContainer {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 1rem;
-    width: 90%;
-  }
-
+@media only screen and (max-width: 68.75em) {
   .last {
-    width: 50%;
+    width: 70%;
   }
 
-  .formInputs label {
-    margin-left: 10%;
-  }
-
-  .formInputs input {
-    display: block;
-    height: 2.5rem;
-    width: 80%;
-    margin: auto;
-  }
-
-  .formInputs p {
-    font-size: 0.8rem;
-    margin: 0.5rem 2rem;
-    color: #d65a31;
+  .formContainer {
+    padding-bottom: 2rem;
   }
 }
 
-@media (max-width: 320px) {
+@media only screen and (max-width: 31.25em) {
   .formContainer {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 1rem;
     width: 90%;
+    padding-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 26.25rem) {
+  .formInputs {
+    margin-bottom: 1.6rem;
+    width: 16rem;
+    margin-left: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 21.75em) {
+  .formContainer {
+    padding: 2rem;
+    padding-bottom: 0;
+    margin-top: 7rem;
+  }
+
+  .formInputs {
+    margin-bottom: 1.6rem;
+    width: 14rem;
+    margin-left: 3rem;
   }
 }

@@ -113,9 +113,7 @@ const SearchForm = () => {
               validators={[]}
               autoFocus={true}
             />
-            <Button className={classes.button} onClick={formSubmitionHandler}>
-              search
-            </Button>
+            <Button onClick={formSubmitionHandler}>search</Button>
           </div>
           {noMoviesFounded && (
             <Modal
